@@ -1,0 +1,99 @@
+:root {
+  --roboto-font: Roboto, sans-serif;
+  --atera-pink: #FF176B;
+  --atera-gold: #D1AD78;
+  --atera-text-color: #1A1A1A;
+  --atera-bg-color: #EDEDED;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.7rem;
+  font-family: var(--roboto-font);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--atera-text-color);
+  background-color: var(--atera-bg-color);
+}
+
+.btn {
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 15px;
+  color: #fff;
+  background-color: var(--atera-pink);
+  cursor: pointer;
+}
+
+.btn:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+}
+
+.btn:hover:after {
+  opacity: 1;
+}
+
+.dot {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+.dot.dot-filled {
+  background-color: var(--atera-gold);
+}
+
+.faint {
+  opacity: 0.5;
+  font-size: 0.6rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    font-size: 1.1rem;
+  }
+  
+  .faint {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+  
+  .btn, 
+  .faint {
+    font-size: 1rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
